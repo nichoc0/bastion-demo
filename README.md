@@ -41,4 +41,3 @@ VITE_DEMO=1 npm run dev
 Pushes to this repo auto-deploy to demo.trybastion.ai via Vercel (project
 `bastion-demo`, build env `VITE_DEMO=1`).
 
-<!-- ci/cd check 145400Z -->
