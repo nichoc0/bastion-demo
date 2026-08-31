@@ -1,0 +1,49 @@
+{
+  "_comment": "Cortex knowledge-base snapshot. Structure is the exact folder tree app0192726 renders; counts are pulled from the live cortex graph (cortex-local, graph 'bastion'). Editable: change counts or add folders/items here and the Cortex browser reflects it. Drill-down items can be added per folder under an optional 'items' array.",
+  "generatedAt": "2026-08-31",
+  "links": 23296,
+  "sections": [
+    {
+      "title": "Attack Library",
+      "folders": [
+        { "label": "Techniques", "type": "Technique", "count": 3902, "drill": "family" },
+        { "label": "Attack Mechanisms", "type": "Mechanism", "count": 159 },
+        { "label": "Jailbreak Prompts", "type": "JailbreakPrompt", "count": 226 },
+        { "label": "Liberation Commands", "type": "LiberationCommand", "count": 35 },
+        { "label": "Captured System Prompts", "type": "SystemPrompt", "count": 132 },
+        { "label": "Offensive Skills", "type": "Skill", "count": 817 }
+      ]
+    },
+    {
+      "title": "Classes & Standards",
+      "folders": [
+        { "label": "Vulnerability Classes", "type": "VulnClass", "count": 46 },
+        { "label": "OWASP LLM Top 10", "type": "OWASPClass", "count": 16 },
+        { "label": "OWASP Agentic (ASI)", "type": "ASIClass", "count": 5 },
+        { "label": "CWE Mappings", "type": "CWE", "count": 27 },
+        { "label": "Benchmarks", "type": "Benchmark", "count": 11 }
+      ]
+    },
+    {
+      "title": "Engagement Record",
+      "folders": [
+        { "label": "Engagements", "type": "Engagement", "count": 161 },
+        { "label": "Confirmed Findings", "type": "Finding", "count": 1195 },
+        { "label": "Strategic Lessons", "type": "StrategicLesson", "count": 768 },
+        { "label": "Mapped Endpoints", "type": "Endpoint", "count": 168 },
+        { "label": "Guardrails", "type": "Guardrail", "count": 15 },
+        { "label": "Defenses", "type": "Defense", "count": 37 }
+      ]
+    },
+    {
+      "title": "Recon & Intel",
+      "folders": [
+        { "label": "Bounty Programs", "type": "Program", "count": 884 },
+        { "label": "Vendors", "type": "Vendor", "count": 47 },
+        { "label": "Products", "type": "Product", "count": 66 },
+        { "label": "Sources", "type": "Source", "count": 337 },
+        { "label": "Research Venues", "type": "ResearchVenue", "count": 6 }
+      ]
+    }
+  ]
+}

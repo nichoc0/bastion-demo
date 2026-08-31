@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-06-29T15:05:00.000Z",
+  "ok": true,
+  "service": "bastion-proxy",
+  "tools": {
+    "voice-gateway": { "status": "up", "latencyMs": 42 },
+    "falkordb": { "status": "up", "latencyMs": 4 },
+    "redis": { "status": "up", "latencyMs": 3 },
+    "camoufox": { "status": "up", "latencyMs": 28 },
+    "frida": { "status": "idle", "latencyMs": null },
+    "ghidra": { "status": "up", "latencyMs": 11 },
+    "ollama": { "status": "idle", "latencyMs": null },
+    "wrap": { "status": "up", "latencyMs": 178 }
+  }
+}

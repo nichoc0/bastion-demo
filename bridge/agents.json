@@ -1,0 +1,42 @@
+[
+  {
+    "session_id": "cd848c08-f274-4af6-bd38-e73ffd1c5066",
+    "name": "bastion-mosalah-group",
+    "cwd": "/Users/nca/bastion-red/engagements/mosalah-group",
+    "pid": 8607,
+    "pgid": 8607,
+    "started": 1784930526.390379
+  },
+  {
+    "session_id": "1caafa86-16d0-4b74-814a-ea68f53bcb43",
+    "name": "bastion-snapchat",
+    "cwd": "/Users/nca/bastion-red/engagements/snapchat",
+    "pid": 8608,
+    "pgid": 8608,
+    "started": 1784930526.3926
+  },
+  {
+    "session_id": "cc9eabcc-6013-42a3-b9c7-a9cf3fbf3649",
+    "name": "bastion-quizlet",
+    "cwd": "/Users/nca/bastion-red/engagements/quizlet",
+    "pid": 8610,
+    "pgid": 8610,
+    "started": 1784930526.395243
+  },
+  {
+    "session_id": "93d03b2b-af96-4304-bd81-dce244dc024a",
+    "name": "bastion-canva",
+    "cwd": "/Users/nca/bastion-red/engagements/canva",
+    "pid": 8611,
+    "pgid": 8611,
+    "started": 1784930526.398209
+  },
+  {
+    "session_id": "d3f3ceaa-b646-4db6-b48c-77256dc2a967",
+    "name": "bastion-optimizely",
+    "cwd": "/Users/nca/bastion-red/engagements/optimizely",
+    "pid": 8612,
+    "pgid": 8612,
+    "started": 1784930526.3995378
+  }
+]

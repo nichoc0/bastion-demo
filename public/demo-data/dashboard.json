@@ -1,0 +1,201 @@
+{
+  "_comment": "Editable data source for the Dashboard KPIs and charts. Edit numbers or add rows/kpis here; the dashboard reads this at load. Visuals do not change, only the data. Severity counts drive Open-findings total, the donut, and the narrative.",
+  "lastScan": "6m ago",
+  "posture": 54,
+  "postureLast": 48,
+  "trend": [
+    46,
+    45,
+    47,
+    44,
+    48,
+    47,
+    49,
+    48,
+    50,
+    49,
+    51,
+    50,
+    52,
+    54
+  ],
+  "severity": {
+    "Critical": 3,
+    "High": 5,
+    "Medium": 9,
+    "Low": 12
+  },
+  "summary": {
+    "agentsAtRisk": 4,
+    "agentsTotal": 24,
+    "pastSla": 4
+  },
+  "kpis": [
+    {
+      "value": "29",
+      "label": "Open findings",
+      "delta": -4,
+      "hint": "across all agents"
+    },
+    {
+      "value": "4",
+      "label": "Past SLA",
+      "delta": 1,
+      "hint": "breaching remediation SLA"
+    },
+    {
+      "value": "4.1",
+      "unit": "d",
+      "label": "MTTR",
+      "delta": -0.6,
+      "hint": "mean time to remediate"
+    },
+    {
+      "value": "82",
+      "unit": "%",
+      "label": "Within SLA",
+      "delta": 3,
+      "hint": "remediated on time"
+    },
+    {
+      "value": "11",
+      "label": "Remediated",
+      "delta": 4,
+      "hint": "last 7 days"
+    },
+    {
+      "value": "4",
+      "unit": "/24",
+      "label": "Agents at risk",
+      "delta": -1,
+      "hint": "with an open finding"
+    }
+  ],
+  "attention": [
+    {
+      "id": "BAS-1042",
+      "sev": "Critical",
+      "title": "Tool-call exfiltration via injected résumé",
+      "asset": "Kestrel · HR intake",
+      "sla": "Breached"
+    },
+    {
+      "id": "BAS-1039",
+      "sev": "Critical",
+      "title": "SIM-swap approved without OTP verification",
+      "asset": "Vantage · telecom",
+      "sla": "Breached"
+    },
+    {
+      "id": "BAS-1031",
+      "sev": "Critical",
+      "title": "Controlled-substance delivery override",
+      "asset": "Maple · Sera",
+      "sla": "1d left"
+    },
+    {
+      "id": "BAS-1024",
+      "sev": "High",
+      "title": "System prompt leaked verbatim to caller",
+      "asset": "Apex · banking",
+      "sla": "3d left"
+    },
+    {
+      "id": "BAS-1018",
+      "sev": "High",
+      "title": "Refund issued past policy ceiling",
+      "asset": "Ada · support",
+      "sla": "5d left"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Prompt injection",
+      "n": 8
+    },
+    {
+      "name": "Insecure tool use",
+      "n": 6
+    },
+    {
+      "name": "Policy bypass",
+      "n": 5
+    },
+    {
+      "name": "Jailbreak",
+      "n": 4
+    },
+    {
+      "name": "Info disclosure",
+      "n": 4
+    },
+    {
+      "name": "Data exfiltration",
+      "n": 2
+    }
+  ],
+  "assets": [
+    {
+      "name": "Kestrel",
+      "type": "HR intake",
+      "crit": 1,
+      "high": 1,
+      "open": 8,
+      "risk": "High"
+    },
+    {
+      "name": "Vantage",
+      "type": "telecom",
+      "crit": 1,
+      "high": 1,
+      "open": 7,
+      "risk": "High"
+    },
+    {
+      "name": "Maple · Sera",
+      "type": "pharmacy",
+      "crit": 1,
+      "high": 0,
+      "open": 5,
+      "risk": "High"
+    },
+    {
+      "name": "Apex",
+      "type": "banking",
+      "crit": 0,
+      "high": 2,
+      "open": 6,
+      "risk": "Medium"
+    },
+    {
+      "name": "Ada",
+      "type": "support",
+      "crit": 0,
+      "high": 1,
+      "open": 3,
+      "risk": "Medium"
+    }
+  ],
+  "frameworks": [
+    {
+      "label": "OWASP LLM Top 10",
+      "pct": 90
+    },
+    {
+      "label": "MITRE ATLAS",
+      "pct": 72
+    },
+    {
+      "label": "NIST AI RMF",
+      "pct": 64
+    },
+    {
+      "label": "SOC 2 (AI controls)",
+      "pct": 81
+    },
+    {
+      "label": "EU AI Act",
+      "pct": 38
+    }
+  ]
+}

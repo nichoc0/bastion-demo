@@ -1,0 +1,11 @@
+node_modules
+dist
+.vite
+.toollogs
+*.log
+.DS_Store
+tools/frida-server
+.vercel
+.env
+.env.*
+harness/.env

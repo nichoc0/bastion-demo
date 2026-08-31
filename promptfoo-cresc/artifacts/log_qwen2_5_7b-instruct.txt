@@ -1,0 +1,60 @@
+(node:13657) ExperimentalWarning: DecompressInterceptor is experimental and subject to change
+(Use `node --trace-warnings ...` to show where the warning was created)
+Generating test cases...
+Cache is disabled
+Synthesizing test cases for 1 prompt...
+Using plugins:
+
+intent (5 tests) (custom config)
+
+Using strategies:
+
+crescendo (5 additional tests)
+
+Test Generation Summary:
+• Total tests: 5
+• Plugin tests: 5
+• Plugins: 1
+• Strategies: 1
+• Max concurrency: 2
+
+
+
+Test Generation Report:
+[90m┌─────[39m[90m┬──────────[39m[90m┬────────────────────────────────────────[39m[90m┬────────────[39m[90m┬────────────[39m[90m┬──────────────┐[39m
+[90m│[39m[31m #   [39m[90m│[39m[31m Type     [39m[90m│[39m[31m ID                                     [39m[90m│[39m[31m Requested  [39m[90m│[39m[31m Generated  [39m[90m│[39m[31m Status       [39m[90m│[39m
+[90m├─────[39m[90m┼──────────[39m[90m┼────────────────────────────────────────[39m[90m┼────────────[39m[90m┼────────────[39m[90m┼──────────────┤[39m
+[90m│[39m 1   [90m│[39m Plugin   [90m│[39m intent                                 [90m│[39m 5          [90m│[39m 5          [90m│[39m Success      [90m│[39m
+[90m├─────[39m[90m┼──────────[39m[90m┼────────────────────────────────────────[39m[90m┼────────────[39m[90m┼────────────[39m[90m┼──────────────┤[39m
+[90m│[39m 2   [90m│[39m Strategy [90m│[39m crescendo                              [90m│[39m 5          [90m│[39m 5          [90m│[39m Success      [90m│[39m
+[90m└─────[39m[90m┴──────────[39m[90m┴────────────────────────────────────────[39m[90m┴────────────[39m[90m┴────────────[39m[90m┴──────────────┘[39m
+========================================================================================================================
+Wrote 5 test cases to artifacts/out_qwen2_5_7b-instruct.json
+========================================================================================================================
+Running scan...
+Starting evaluation eval-KUF-2026-06-29T21:55:08
+Running 5 test cases (up to 2 at a time)...
+✓ Red team complete (ID: eval-KUF-2026-06-29T21:55:08)
+
+» View results: promptfoo view
+» Share with your team: https://promptfoo.app
+» Feedback: https://promptfoo.dev/feedback
+
+Total Tokens: 6,655
+  Probes: 13
+  Grading: 6,655 (6,301 prompt, 354 completion)
+
+Providers:
+  ollama:chat:qwen2.5:7b-instruct: 52,733 (0 requests; 48,805 prompt, 3,928 completion)
+
+Results:
+  ✓ 3 passed (60.00%)
+  ✗ 2 failed (40.00%)
+  0 errors (0%)
+Duration: 28m 11s (concurrency: 2)
+
+Writing output to artifacts/out_qwen2_5_7b-instruct.json
+Total scan time: 28m 23s (generation: 12s, evaluation: 28m 10s)
+
+Red team scan complete!
+To view the results, run promptfoo redteam report
