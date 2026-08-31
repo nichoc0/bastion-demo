@@ -3,25 +3,36 @@ import { Folder, House, CaretDown } from '@phosphor-icons/react';
 
 // Cortex — the knowledge base. Folder tree on the left, a folder-card overview
 // on the right, grouped by section. The structure is the exact tree app0192726
-// renders; the counts are a snapshot of the live cortex graph, served from an
-// editable file (public/demo-data/cortex.json). Add folders/items there and the
-// browser reflects it.
+// renders; the counts are LIVE from the cortex graph, fetched over a read-only
+// tunnel that serves aggregate counts only (no node contents ever leave the
+// graph). Refreshes every 20s. No data is bundled into this repo.
 
+const CORTEX_URL = import.meta.env.VITE_CORTEX_URL || 'https://ncas-mac-mini-1.tailb4b5fb.ts.net';
 const num = (n) => (n ?? 0).toLocaleString('en-US');
 
 export default function CortexView() {
   const [data, setData] = useState(null);
+  const [status, setStatus] = useState('loading'); // loading | ok | offline
   useEffect(() => {
     let alive = true;
-    fetch(`${import.meta.env.BASE_URL}demo-data/cortex.json`, { cache: 'no-store' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((j) => { if (alive) setData(j); })
-      .catch(() => {});
-    return () => { alive = false; };
+    const load = () =>
+      fetch(`${CORTEX_URL}/overview`, { cache: 'no-store' })
+        .then((r) => (r.ok ? r.json() : Promise.reject(new Error('bad status'))))
+        .then((j) => { if (alive) { setData(j); setStatus('ok'); } })
+        .catch(() => { if (alive) setStatus((s) => (data ? 'ok' : 'offline')); });
+    load();
+    const t = setInterval(load, 20000);
+    return () => { alive = false; clearInterval(t); };
   }, []);
 
   if (!data) {
-    return <div className="px-4 py-8 text-[12px] text-slate-400 dark:text-slate-500">Loading corpus…</div>;
+    return (
+      <div className="px-6 py-10 text-[13px] text-slate-500 dark:text-slate-400">
+        {status === 'offline'
+          ? 'Cortex is offline. The live knowledge graph is not reachable right now.'
+          : 'Connecting to the live cortex graph…'}
+      </div>
+    );
   }
 
   const folders = data.sections.flatMap((s) => s.folders);
