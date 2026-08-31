@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useUser, useOrganization } from '@clerk/clerk-react';
 import { Lightning, TerminalWindow } from '@phosphor-icons/react';
+import { isDemoMode } from '../../lib/demoMode';
 
 // Admin-only "All active" board: every Bastion agent that is live right now.
 // A Bastion agent is a Claude Code session whose cwd is under bastion-red/; the
@@ -85,7 +86,8 @@ export default function AllActiveAdmin() {
     return () => { alive = false; clearInterval(t); };
   }, [isAdmin]);
 
-  if (!isAdmin) return null;
+  // Never on the public demo — it monitors local Bastion-agent transcripts.
+  if (!isAdmin || isDemoMode()) return null;
 
   return (
     <section className="mb-8 border border-slate-200 dark:border-slate-800 bg-slate-50/60 dark:bg-slate-900/30">
